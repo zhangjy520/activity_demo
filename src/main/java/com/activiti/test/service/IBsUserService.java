@@ -1,0 +1,29 @@
+package com.activiti.test.service;
+
+import java.util.List;
+
+import com.activiti.test.entity.BsUser;
+import com.baomidou.mybatisplus.plugins.Page;
+import com.baomidou.mybatisplus.service.IService;
+
+/**
+ * <p>
+ *  服务类
+ * </p>
+ *
+ * @author jun
+ * @since 2018-05-14
+ */
+public interface IBsUserService extends IService<BsUser> {
+
+	BsUser getUserByNameAndPassword(String name, String pwd);
+
+	Page<BsUser> queryAllUser(int pageNum, int numPerPage, String searchText);
+
+	void addUser(String name,String loginName, String roleCode) throws Exception;
+
+	List<BsUser> queryUsersByRoleCode(String string);
+
+	void delUser(Long id) throws Exception;
+	
+}

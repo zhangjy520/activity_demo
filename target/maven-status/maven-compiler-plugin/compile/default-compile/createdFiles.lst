@@ -1,0 +1,16 @@
+com\activiti\test\service\IBsRoleService.class
+com\activiti\test\service\IBsUserService.class
+com\activiti\test\mapper\BsRoleMapper.class
+com\activiti\test\service\impl\BsUserServiceImpl.class
+com\activiti\test\mapper\BsUserRoleMapper.class
+com\activiti\test\service\impl\BsRoleServiceImpl.class
+com\activiti\test\utils\CreateACTTable.class
+com\activiti\test\entity\BsRole.class
+com\activiti\test\utils\AutoGeneratorHelper.class
+com\activiti\test\service\IBsUserRoleService.class
+com\activiti\test\service\impl\BsUserRoleServiceImpl.class
+com\activiti\test\mapper\BsUserMapper.class
+com\activiti\test\entity\BsUser.class
+com\activiti\test\entity\BsUserRole.class
+com\activiti\test\action\MenuController.class
+com\activiti\test\service\support\BaseServiceImpl.class

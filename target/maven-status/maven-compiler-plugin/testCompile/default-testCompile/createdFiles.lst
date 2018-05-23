@@ -1,0 +1,3 @@
+com\activiti\junit\BaseJunit4Test.class
+com\activiti\junit\ACTTest.class
+com\activiti\junit\listener\MyTaskListener.class

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.activiti.test.mapper.BsUserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.activiti.test.entity.BsUser">
+		<id column="ID" property="id" />
+		<result column="NAME" property="name" />
+		<result column="LOGIN_NAME" property="loginName" />
+		<result column="PASS_WORD" property="passWord" />
+	</resultMap>
+	
+	<resultMap type="com.activiti.test.entity.BsUser" id="usersMap">  
+        <id column="ID" property="id" />
+		<result column="NAME" property="name" />
+		<result column="LOGIN_NAME" property="loginName" />
+		<result column="PASS_WORD" property="passWord" />
+        <association property="bsRole" javaType="com.activiti.test.entity.BsRole">  
+        <result column="ROLE_NAME" property="name" />
+		<result column="DEC" property="dec" />
+		<result column="ROLE_CODE" property="roleCode" />
+        </association>  
+         
+	</resultMap> 
+	
+	<select id="selectUserByNameAndPassword" resultType="com.activiti.test.entity.BsUser">
+		select * from BS_USER where LOGIN_NAME = #{name} and PASS_WORD = #{pwd}
+	</select>
+	
+	<select id="queryAllUser" resultMap="usersMap">
+		select t1.*,t3.NAME as ROLE_NAME,t3.DEC,t3.ROLE_CODE from BS_USER t1 
+		left join BS_USER_ROLE t2 on t1.ID = t2.USER_ID 
+		left join BS_ROLE t3 on t3.ROLE_CODE = t2.ROLE_CODE 
+		where 1 = 1
+		<if test="searchText != null and searchText != ''">
+			and t1.LOGIN_NAME like CONCAT(CONCAT('%',#{searchText},'%'))
+		</if>
+	</select>
+	
+	<select id="queryUsersByRoleCode" resultType="com.activiti.test.entity.BsUser">
+		select t1.* from BS_USER t1 
+		left join BS_USER_ROLE t2 on t1.ID = t2.USER_ID 
+		where t2.ROLE_CODE = #{code}
+	</select>
+</mapper>

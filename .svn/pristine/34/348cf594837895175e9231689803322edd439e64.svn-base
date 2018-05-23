@@ -1,0 +1,16 @@
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\utils\CreateACTTable.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\mapper\BsUserRoleMapper.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\impl\BsUserRoleServiceImpl.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\IBsRoleService.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\IBsUserRoleService.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\entity\BsRole.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\action\MenuController.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\mapper\BsRoleMapper.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\IBsUserService.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\entity\BsUser.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\entity\BsUserRole.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\utils\AutoGeneratorHelper.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\impl\BsUserServiceImpl.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\mapper\BsUserMapper.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\impl\BsRoleServiceImpl.java
+D:\IT\tools\eclipse-java\workspace\workFlow\src\main\java\com\activiti\test\service\support\BaseServiceImpl.java
