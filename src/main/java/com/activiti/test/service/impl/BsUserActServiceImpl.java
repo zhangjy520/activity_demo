@@ -14,6 +14,7 @@ import org.activiti.engine.RuntimeService;
 import org.activiti.engine.runtime.ProcessInstance;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -41,6 +42,7 @@ public class BsUserActServiceImpl extends BaseServiceImpl<BsUserActMapper, BsUse
 	@Autowired
 	private IdentityService identityService;
 	
+	@Transactional
 	@Override
 	public void askForLeave(Long id,String name, Integer day, String reason) throws Exception{
 		Map<String, Object> variables = new HashMap<String, Object>(); 

@@ -13,6 +13,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -44,6 +45,7 @@ public class BsUserServiceImpl extends BaseServiceImpl<BsUserMapper, BsUser> imp
 		return users;
 	}
 
+	@Transactional
 	@Override
 	public void addUser(String name, String loginName,String roleCode) throws RuntimeException{
 		BsUser user = new BsUser();
@@ -68,6 +70,7 @@ public class BsUserServiceImpl extends BaseServiceImpl<BsUserMapper, BsUser> imp
 		return bsUserMapper.queryUsersByRoleCode(code);
 	}
 
+	@Transactional
 	@Override
 	public void delUser(Long id) throws RuntimeException{
 		Integer num2 = bsUserRoleMapper.delByUserId(id);
