@@ -1,5 +1,6 @@
 .project
 /.settings/
+/target/
 /.svn/
 .classpath
 workFlow.iml
